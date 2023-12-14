@@ -119,7 +119,17 @@ public class TechJobs {
 
     // Print a list of jobs
     private static void printJobs(ArrayList<HashMap<String, String>> someJobs) {
+        if (someJobs.isEmpty()) {
+            System.out.println("\nNo Results");
+            return;
+        }
 
-        System.out.println("printJobs is not implemented yet");
+        for (HashMap<String, String> entry : someJobs) {
+            System.out.println("*****");
+            for (String value : entry.values()) {
+                System.out.println(value);
+            }
+            System.out.println("*****\n");
+        }
     }
 }
